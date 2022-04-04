@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+#background_image {
+    background-image: url('https://images.unsplash.com/photo-1587316745621-3757c7076f7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1973&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0.2rem);
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -1;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+h1 {
+    position: relative;
+    color: #f9df18b2;
+    font-size: 65px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#input_module {
+    display: flex;
+    justify-content: center;  
+    margin: 100px 0 30px 0;
+}
+
+input {
+    padding: 13px;
+    width: 60%;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 0 10px #f9df187e;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#btn_module {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.btn {
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 40%;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 0 10px #f9df187e;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    transition: 0.9s;
+}
+
+.btn:hover {
+    background-color: #f9df187e; 
+    color: white;
+}
+
+#btnTwo_module {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+#btnReset {
+    display: none;
+    padding: 7px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 0 10px #31775baf;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    transition: 0.9s;
+    letter-spacing: 1px;
+}
+
+#btnReset:hover {
+    background-color: #31775baf; 
+    color: #fff;
+}
+
+#main {
+    background-color: rgba(243, 239, 239, 0.925);
+    height: 550px;
+    display: none;
+    border-radius: 10px;
+    margin: 0 100px;
+}
+
+#city_module, #par{
+    display: flex;
+    justify-content: center;  
+}
+
+#city {
+    background-color: #f9df18bd;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+#date {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.now-date {
+    padding: 5px;
+    width: 60%;
+    background-color: rgb(74, 74, 170);
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.par_infections, .par_vaccinations {
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 0.8px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    padding: 7px;
+    width: 50%;
+}
+
+.par_infections{
+    background-color: #a33e40;
+    margin: 0 0 10px 0;
+}
+
+.par_vaccinations    {
+    background-color: #31775b;
+    margin: 10px 0;
+}
+
+li {
+    list-style: none;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: left;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.info, .infoTwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px 30px 7px 30px;
+}
+
+.info {
+    background-color: #a33e4052;
+    border-radius: 10px;
+}
+
+.info #description {
+    color: #812628;
+}
+
+.infoTwo #description {
+    color: #193a2d;
+}
+
+#description {
+    margin-left: -40px;
+}
+
+.infoTwo {
+    background-color: #45aa827a;
+    border-radius: 10px;
+}
+
+#confirmed, #recovered, #deaths, #population {
+    color: #a33e40;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#administered , #vaccinated, #partially_vaccinated {
+    color: #2c6d53;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media all and (max-width: 500px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #header {
+        margin: 0 100px;
+    }
+
+    input {
+        font-size: 15px;
+        width: 40%;
+    }
+
+    .swal-width {
+        width: 300px !important;
+    }
+
+    .btn {
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+
+    #main {
+        height: 530px;
+        width: 330px;
+    }
+
+    #confirmed, #recovered, #deaths, #population, #administered , #vaccinated, #partially_vaccinated {
+        font-size: 16px;
+    }
+
+    .par_infections, .par_vaccinations {
+        font-size: 16px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+    #btnTwo_module {
+        margin-top: 30px;
+    }
+    
+}
+
+@media all and (max-width: 350px) {
+    #main {
+        width: 300px;
+    }
+}
+
