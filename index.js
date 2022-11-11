@@ -28,7 +28,7 @@ gsap.from('#btn_module', 1.5, {
 
 const api = {
     infections: "https://covid-api.mmediagroup.fr/v1/cases",
-    vaccinations: "https://covid-api.mmediagroup.fr/v1/vaccines"
+    // vaccinations: "https://covid-api.mmediagroup.fr/v1/vaccines"/
 }
 
 const input = document.querySelector('#input');
@@ -53,7 +53,8 @@ function enter(e) {
         }
 
     getInfections(changeCity);
-    getVaccinations (changeCity);
+    input.value = '';
+    // getVaccinations (changeCity);
     }
 }
 
@@ -86,22 +87,23 @@ function displayResult(result) {
     
 }
 
-async function getVaccinations(city) {
-    const resTwo = await fetch(`${api.vaccinations}?country=${city}`);
-    const resultTwo = await resTwo.json();
-    displayResultTwo(resultTwo);
-}
+//API doesn't work
+// async function getVaccinations(city) {
+//     const resTwo = await fetch(`${api.vaccinations}?country=${city}`);
+//     const resultTwo = await resTwo.json();
+//     displayResultTwo(resultTwo);
+// }
 
-function displayResultTwo(resultTwo) {
-    let administered = document.querySelector('#administered');
-    administered.textContent = `${parseInt(resultTwo.All.administered).toLocaleString()}`;
+// function displayResultTwo(resultTwo) {
+//     let administered = document.querySelector('#administered');
+//     administered.textContent = `${parseInt(resultTwo.All.administered).toLocaleString()}`;
     
-    let vaccinated = document.querySelector('#vaccinated');
-    vaccinated.textContent = `${parseInt(resultTwo.All.people_vaccinated).toLocaleString()}`
+//     let vaccinated = document.querySelector('#vaccinated');
+//     vaccinated.textContent = `${parseInt(resultTwo.All.people_vaccinated).toLocaleString()}`
     
-    let partiallyVaccinated = document.querySelector('#partially_vaccinated');
-    partiallyVaccinated.textContent = `${parseInt(resultTwo.All.people_partially_vaccinated).toLocaleString()}`
-}
+//     let partiallyVaccinated = document.querySelector('#partially_vaccinated');
+//     partiallyVaccinated.textContent = `${parseInt(resultTwo.All.people_partially_vaccinated).toLocaleString()}`
+// }
 
     const btnReset = document.querySelector('#btnReset');
     btnReset.addEventListener('click', () => {
